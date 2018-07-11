@@ -1,0 +1,42 @@
+.c-bio {
+  display: flex;
+  align-items: center;
+  padding: 6rem;
+
+  &::before,
+  &::after {
+    color: $orange;
+    font-size: 32rem;
+    font-weight: 300;
+    line-height: 1;
+    transform: translateY(-.05em); /* Baseline shift */
+  }
+
+  &::before {
+    content: "{";
+  }
+
+  &::after {
+    content: "}";
+  }
+}
+
+.c-bio__container {
+  text-align: center;
+
+  & > * {
+    display: inline-block;
+  }
+}
+
+.c-bio__header {
+  color: $orange;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  max-width: 12em;
+}
+
+.c-bio__paragraph {
+  margin-top: 0;
+}

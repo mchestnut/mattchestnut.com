@@ -1,15 +1,10 @@
-@font-face {
-  font-family: 'Nunito';
-  src: url("../fonts/Nunito-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-body {
-  font-family: 'Nunito';
-  font-size: 18px;
-}
-
-img {
-  max-width: 100%;
-}
+@import 'variables';
+@import 'base';
+@import 'social-icons';
+@import 'hero';
+@import 'bio';
+@import 'lists';
+@import 'checklist';
+@import 'samples';
+@import 'more';
+@import 'footer';

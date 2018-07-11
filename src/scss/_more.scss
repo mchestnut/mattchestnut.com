@@ -1,0 +1,40 @@
+.c-more {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.c-more__codepen {
+  width: 100%;
+}
+
+.c-more__github {
+  width: 25%;
+  fill: $gray-dark;
+}
+
+.c-more__paragraph {
+  font-style: italic;
+  margin-left: 1rem;
+}
+
+.c-more__icon {
+  transition: fill, stroke $quick;
+}
+
+.c-more__icon--codepen {
+  stroke: $gray-dark;
+
+  &:hover {
+    stroke: $orange;
+  }
+}
+
+.c-more__icon--github {
+  fill: inherit;
+
+  &:hover {
+    fill: $orange;
+  }
+}

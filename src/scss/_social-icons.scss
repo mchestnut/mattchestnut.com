@@ -1,0 +1,20 @@
+.c-social-icons {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.c-social-icons__link {
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.c-social-icons__icon {
+  width: 1.5rem;
+  fill: white;
+  transition: transform $quick;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

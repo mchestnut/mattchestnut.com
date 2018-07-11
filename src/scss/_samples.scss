@@ -1,0 +1,31 @@
+.c-samples {
+  padding: 3rem 1rem;
+}
+
+.c-samples__header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  &::before {
+    content: '/* ';
+  }
+
+  &::after {
+    content: ' */';
+  }
+}
+
+.c-samples__container {
+  display: flex;
+}
+
+.c-samples__column {
+  text-align: center;
+  width: 25%;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+
+.c-samples__title {
+  color: $orange;
+}

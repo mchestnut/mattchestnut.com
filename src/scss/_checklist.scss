@@ -1,0 +1,10 @@
+.c-checklist {
+  list-style: none;
+  padding-left: 1.3em;
+}
+
+.c-checklist__item::before {
+  content: "\2611";
+  margin-right: 0.5em;
+  margin-left: -1.3em;
+}
