@@ -19,7 +19,14 @@
 html {
   color: $gray-dark;
   font-family: 'Nunito';
-  font-size: 18px;
+  font-size: 112%;
+}
+
+/* @support rule to target out IE11 */
+@supports (display: flex) {
+  html {
+    font-size: calc(90% + 0.7vw);
+  }
 }
 
 body {

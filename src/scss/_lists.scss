@@ -1,6 +1,9 @@
 .c-lists {
   color: white;
-  display: flex;
+
+  @include for-tablet-landscape-up {
+    display: flex;
+  }
 }
 
 .c-lists__container {

@@ -1,28 +1,55 @@
 .c-bio {
   display: flex;
   align-items: center;
-  padding: 6rem;
+  padding: 2rem 1rem;
+  position: relative;
+
+  @include for-tablet-portrait-up {
+    padding: 3rem 2rem;
+  }
 
   &::before,
   &::after {
     color: $orange;
-    font-size: 32rem;
+    font-size: 20rem;
     font-weight: 300;
     line-height: 1;
-    transform: translateY(-.05em); /* Baseline shift */
+    opacity: 0.2;
+    transform: translateY(-.05em);
+    transition: opacity $normal;
+
+    @include for-tablet-portrait-up {
+      font-size: 32rem;
+    }
+
+    @include for-tablet-landscape-up {
+      opacity: 1;
+    }
   }
 
   &::before {
     content: "{";
+    margin-right: -0.3em;
+
+    @include for-tablet-landscape-up {
+      margin-right: 0;
+    }
   }
 
   &::after {
     content: "}";
+    margin-left: -0.3em;
+
+    @include for-tablet-landscape-up {
+      margin-left: 0;
+    }
   }
 }
 
 .c-bio__container {
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 
   & > * {
     display: inline-block;
@@ -31,10 +58,14 @@
 
 .c-bio__header {
   color: $orange;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.2;
-  max-width: 12em;
+  transition: font-size, $quick;
+
+  @include for-tablet-portrait-up {
+    font-size: 2.5rem;
+  }
 }
 
 .c-bio__paragraph {
