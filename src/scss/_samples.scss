@@ -41,13 +41,13 @@
   text-decoration: none;
 
   &:hover .c-samples__thumbnail {
-    filter: saturate(1);
+    outline-width: 0.3rem;
   }
 }
 
 .c-samples__thumbnail {
-  filter: saturate(0.5);
-  transition: filter $normal;
+  outline: 0 solid $orange;
+  transition: outline-width $quick;
 }
 
 .c-samples__title {

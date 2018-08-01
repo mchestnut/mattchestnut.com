@@ -20,7 +20,8 @@
 }
 
 .c-more__icon {
-  transition: fill, stroke $quick;
+  transition-duration: $quick;
+  transition-property: fill, stroke;
 }
 
 .c-more__icon--codepen {
