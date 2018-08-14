@@ -24,7 +24,6 @@
 }
 
 .c-samples__column {
-  text-align: center;
   padding-right: 1%;
   padding-left: 1%;
 
@@ -34,33 +33,5 @@
 
   @include for-tablet-landscape-up {
     width: 25%;
-  }
-}
-
-.c-samples__link {
-  text-decoration: none;
-
-  &:hover .c-samples__thumbnail {
-    outline-width: 0.3rem;
-  }
-}
-
-.c-samples__thumbnail {
-  outline: 0 solid $orange;
-  transition: outline-width $quick;
-}
-
-.c-samples__title {
-  color: $orange;
-  font-size: 1rem;
-  margin-top: 0;
-  transition: font-size $quick;
-
-  @include for-tablet-portrait-up {
-    font-size: 0.9rem;
-  }
-
-  @include for-tablet-landscape-up {
-    font-size: 0.8rem;
   }
 }
