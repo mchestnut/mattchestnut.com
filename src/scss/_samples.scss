@@ -1,10 +1,22 @@
+@keyframes slide-up {
+  20%,
+  65%,
+  to {
+    top: 1rem;
+  }
+
+  50% {
+    top: 0.5rem;
+  }
+}
+
 .c-samples {
   padding: 3rem 1rem;
 }
 
 .c-samples__header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   &::before {
     content: '/* ';
@@ -34,4 +46,19 @@
   @include for-tablet-landscape-up {
     width: 25%;
   }
+}
+
+/*
+ * Animate top instead of translate to keep positioning context of children
+ * set to body
+ */
+.c-samples__column--animate {
+  position: relative;
+  top: 0;
+  animation: slide-up $normal ease-out both;
+
+  &:nth-child(1)  {animation-delay: $quick;}
+  &:nth-child(2)  {animation-delay: $quick * 1.5;}
+  &:nth-child(3)  {animation-delay: $quick * 2.25;}
+  &:nth-child(4)  {animation-delay: $quick * 2.5;}
 }

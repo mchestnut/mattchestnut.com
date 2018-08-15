@@ -1,3 +1,9 @@
+@keyframes bounce-left {
+  to {
+    transform: translateX(-1rem);
+  }
+}
+
 .c-project__thumbnail {
   outline: 0 solid $orange;
   cursor: pointer;
@@ -73,6 +79,14 @@
 
 .c-project__link {
   font-size: 0.8rem;
+
+  &::after {
+    background-color: $gray-dark;
+  }
+
+  &:hover {
+    color: white;
+  }
 }
 
 .c-project__button,
@@ -109,6 +123,10 @@
 
   &::before {
     content: "← ";
-    font-weight: 1.3rem;
+    font-size: 1.3rem;
+  }
+
+  &:hover {
+    animation: bounce-left $normal ease infinite alternate;
   }
 }

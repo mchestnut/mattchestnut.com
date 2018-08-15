@@ -2,6 +2,27 @@
   background-color: white;
 }
 
+.u-highlight-link {
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    width: 104%;
+    height: 0.1em;
+    position: absolute;
+    left: -2%;
+    bottom: 0;
+    z-index: -1;
+    transition: height $quick;
+  }
+
+  &:hover::after {
+    height: 1.3em;
+  }
+}
+
 .u-overflow-hidden {
   overflow: hidden;
 }

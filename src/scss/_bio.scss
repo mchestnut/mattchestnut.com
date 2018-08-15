@@ -1,8 +1,21 @@
+@keyframes slide-left {
+  to {
+    transform: translate(0, -0.05em);
+  }
+}
+
+@keyframes slide-right {
+  to {
+    transform: translate(0, -0.05em);
+  }
+}
+
 .c-bio {
   display: flex;
   align-items: center;
   padding: 2rem 1rem;
   position: relative;
+  overflow: hidden;
 
   @include for-tablet-portrait-up {
     padding: 3rem 2rem;
@@ -15,8 +28,8 @@
     font-weight: 300;
     line-height: 1;
     opacity: 0.2;
-    transform: translateY(-.05em);
     transition: opacity $normal;
+    animation: $normal ease-out $normal both;
 
     @include for-tablet-portrait-up {
       font-size: 32rem;
@@ -30,6 +43,7 @@
   &::before {
     content: "{";
     margin-right: -0.3em;
+    transform: translate(-150%, -0.05em);
 
     @include for-tablet-landscape-up {
       margin-right: 0;
@@ -39,10 +53,22 @@
   &::after {
     content: "}";
     margin-left: -0.3em;
+    transform: translate(150%, -0.05em);
 
     @include for-tablet-landscape-up {
       margin-left: 0;
     }
+  }
+}
+
+.c-bio--animate {
+
+  &::before {
+    animation-name: slide-left;
+  }
+
+  &::after {
+    animation-name: slide-right;
   }
 }
 
