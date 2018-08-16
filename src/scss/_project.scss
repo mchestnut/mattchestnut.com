@@ -5,12 +5,12 @@
 }
 
 .c-project__thumbnail {
-  outline: 0 solid $orange;
+  box-shadow: 0 0 0 0 $orange;
   cursor: pointer;
-  transition: outline-width $quick;
+  transition: box-shadow $quick;
 
   &:hover {
-    outline-width: 0.3rem;
+    box-shadow: 0 0 0 0.3rem $orange;
   }
 }
 

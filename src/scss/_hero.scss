@@ -1,14 +1,12 @@
 @keyframes fade-and-zoom {
   from {
     opacity: 0;
-    transform: perspective(1vw)
-               translateZ(-0.2vw);
+    transform: scale(0.9);
   }
 
   to {
     opacity: 1;
-    transform: perspective(1vw)
-               translateZ(0);
+    transform: scale(1);
   }
 }
 
