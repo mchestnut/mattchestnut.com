@@ -9,6 +9,7 @@
 .c-lists__container {
   flex-grow: 1;
   padding: 3rem;
+  position: relative;
 }
 
 .c-lists__container--checklist {
@@ -17,12 +18,13 @@
 }
 
 .c-lists__container--skillset {
+  overflow: hidden;
   background-color: $gray-dark;
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'><path fill='white' fill-opacity='0.03' d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'></path></svg>");
 }
 
 .c-lists__paragraph {
-  font-size: 1.13;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
