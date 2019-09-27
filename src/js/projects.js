@@ -14,9 +14,9 @@ projects.forEach(project => {
   title.classList.add('c-project__title--large')
 
   // Get src and create image
-  const src = thumbnail.getAttribute('src').replace('thumbnail', 'full')
+  const src = thumbnail.getAttribute('src')
+  const srcset = thumbnail.getAttribute('srcset')
   const image = document.createElement('img')
-  image.src = src
   image.classList.add('c-project__image')
 
 
@@ -29,6 +29,12 @@ projects.forEach(project => {
 
     if (mode == 'show') {
       clearTimeout(timeout)
+
+      if (!image.src) {
+        image.src = src
+        image.srcset = srcset
+      }
+
       details.classList.add('c-project__details--visible')
       details.classList.add('c-project__details--top')
     } else {
