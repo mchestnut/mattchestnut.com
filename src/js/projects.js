@@ -7,6 +7,7 @@ projects.forEach(project => {
   const details = project.querySelector('.c-project__details')
   const detailsContainer = project.querySelector('.c-project__details-container')
   const thumbnail = project.querySelector('.c-project__thumbnail')
+  const figures = project.querySelectorAll('.c-project__figure')
   let timeout = null
 
   // Clone title
@@ -33,6 +34,14 @@ projects.forEach(project => {
       if (!image.src) {
         image.src = src
         image.srcset = srcset
+      }
+
+      if (figures) {
+        figures.forEach(figure => {
+          const figureImg = figure.querySelector('img')
+          figureImg.src = figureImg.dataset.src
+          figureImg.srcset = figureImg.dataset.srcset
+        })
       }
 
       details.classList.add('c-project__details--visible')
