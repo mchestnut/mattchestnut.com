@@ -1,3 +1,8 @@
+@keyframes pulse {
+  from { transform: rotate(-22deg) scale(0.9); }
+  to   { transform: rotate(-22deg) scale(1.05); }
+}
+
 .c-starburst {
   font-size: 0.8rem;
   text-align: center;
@@ -9,9 +14,9 @@
   position: absolute;
   top: 0.5rem;
   left: 11.5rem;
-  transform: rotate(-22deg);
   background-image: url("data:image/svg+xml,<svg width='52' height='52' viewBox='0 0 52 52' xmlns='http://www.w3.org/2000/svg'><path d='M29 4l-3-3-3 3-3-2-2 4-4-1-1 4H9v4l-4 1 1 4-4 2 2 3-3 3 3 3-2 4 4 2-1 4 4 1v4h4l1 4 4-1 2 3 3-2 3 3 3-3 4 2 2-3 4 1 1-4h4v-4l4-1-1-4 3-2-2-4 3-3-3-3 2-3-3-2 1-4-4-1V9h-4l-1-4-4 1-2-4-4 2z' fill='%23F38630' stroke='white'/></svg>");
   background-size: contain;
+  animation: pulse 2s ease-in-out infinite alternate;
 }
 
 .c-starburst__header {
